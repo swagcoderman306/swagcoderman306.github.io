@@ -306,7 +306,6 @@
           running = false
         }
         startGame()
-        snakeBody.color ='rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')'
       })
       upArrow.addEventListener('touchstart', function () {
         if (direction != 3) {
@@ -427,26 +426,12 @@
           }
         }
       }
-      checkSnakePosition = function(){
-        if(snakeList[0].x > 600){
-          snakeList[0].x = 0
-        }
-        if(snakeList[0].y > 600){
-          snakeList[0].y = 0
-        }
-        if(snakeList[0].x < 0){
-          snakeList[0].x = 600
-        }
-        if(snakeList[0].y < 0){
-          snakeList[0].y = 600
-        }
-      }
       isGameOver = function(){
         for (i in snakeList) {
           if (i==0) {
             continue
           }
-          if (testCollisionSnake(snakeList[0], snakeList[i])) {
+          if (testCollisionSnake(snakeList[0], snakeList[i]) && (snakeList[0].x > 600) && (snakeList[0].x < 0) && (snakeList[0].y > 600) && (snakeList[0].y < 0)) {
             clearInterval(intervalVar)
             ctx.fillText('Game Over! Click To Restart', 210, 300)
             return
@@ -531,7 +516,6 @@
         foodList.forEach(drawFood)
         snakeList.forEach(drawSnake)
         isGameOver()
-        checkSnakePosition()
         updateSnakeList()
         handleParticles()
       }
