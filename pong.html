@@ -56,7 +56,7 @@ function update(){
   ctx.fillStyle = 'rgb(55,153,138)'
   ctx.fillRect(0,p1y,pt,ph)
   ctx.fillRect(canvas.width-pt,p2y,pt,ph)
-  ctx.arc(bx-bd/2,by-bd/2,bd,0,Math.PI*2)
+  ctx.fillRect(bx-bd/2,by-bd/2,bd,bd)
   ctx.fillText(score,100,100)
   ctx.fillText(score2,canvas.width-100,100)
 }
