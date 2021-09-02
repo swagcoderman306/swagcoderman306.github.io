@@ -1,0 +1,63 @@
+<canvas id="canvas1" width="640" height="480" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"></canvas>
+<script>
+let p1y=40,p2y=40,pt=10,ph=100,bx=50,by=50,xv=4,yv=4,bd=6,score=0,score2=0,ais=2,dy
+window.onload=function(){
+  const canvas = document.getElementById('canvas1')
+  const ctx = canvas.getContext('2d')
+  canvas.width = 640
+  canvas.height = 480
+  setInterval(update,1000/30)
+  canvas.addEventListener('mousemove', function(e){
+    p1y = e.clientY-ph/2
+  })
+}
+function reset(){
+  bx=canvas.width/2
+  by=canvas.height/2
+  xv=-xv
+  yv=3
+}
+function update(){
+  bx+=xv
+  by+=yv
+  if(by<0 && yv<0){
+    yv=-yv
+  }
+  if(by>c.height && yv>0){
+    yv=-yv
+  }
+  if(bx<0){
+    if(by>p1y && by<p1y+ph){
+      xv=-xv
+      dy=by-(p1y+ph/2)
+      yv=dy*.3
+    } else {
+      score2++
+      reset()
+    }
+  }
+  if(bx>canvas.width){
+    if(by>p2y && by<p2y+ph){
+      xv=-xv
+      dy=by-(p1y+ph/2)
+      yv=dy*.3
+    } else {
+      score++
+      reset()
+    }
+  }
+  if(p2y+ph/2<by){
+    p2y+=ais
+  } else {
+    p2y-=ais
+  }
+  ctx.fillStyle = 'gray'
+  ctx.fillRect(0,0,canvas.width,canvas.height)
+  ctx.fillStyle = 'rgb(55,153,138)'
+  ctx.fillRect(0,p1y,pt,ph)
+  ctx.fillRect(canvas.width-pt,p2y,pt,ph)
+  ctx.arc(bx-bd/2,by-bd/2,bd,0,Math.PI*2)
+  ctx.fillText(score,100,100)
+  ctx.fillText(score2,canvas.width-100,100)
+}
+</script>
