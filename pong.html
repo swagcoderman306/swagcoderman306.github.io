@@ -51,12 +51,14 @@ function update(){
   } else {
     p2y-=ais
   }
-  ctx.fillStyle = 'gray'
+  ctx.fillStyle = 'lightgray'
   ctx.fillRect(0,0,canvas.width,canvas.height)
   ctx.fillStyle = 'rgb(55,153,138)'
   ctx.fillRect(0,p1y,pt,ph)
   ctx.fillRect(canvas.width-pt,p2y,pt,ph)
+  ctx.fillStyle = 'white'
   ctx.fillRect(bx-bd/2,by-bd/2,bd,bd)
+  ctx.font = '40px Calibri'
   ctx.fillText(score,100,100)
   ctx.fillText(score2,canvas.width-100,100)
 }
