@@ -1,187 +1,27 @@
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
+<html>
+  <head>
+    <title>Cool Boi Games Collection</title>
+    <meta name="Description" content="A website with awesome games on it!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
     <style>
-      * {
+      *{
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding: 0;
+        margin: 0;
         box-sizing: border-box;
-        font-family: 'Press Start 2P', cursive;
       }
     </style>
   </head>
   <body>
-    <!-- red container div -->
-    <div style="position: relative; display: inline-block">
-      <!-- smaller red container div -->
-      <div
-        style="
-          position: absolute;
-          display: flex;
-          width: 100%;
-          align-items: center;
-          padding: 20px;
-        "
-      >
-        <!-- player health -->
-        <div
-          style="
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            border-top: 4px solid white;
-            border-left: 4px solid white;
-            border-bottom: 4px solid white;
-          "
-        >
-          <div style="background-color: red; height: 30px; width: 100%"></div>
-          <div
-            id="playerHealth"
-            style="
-              position: absolute;
-              background: #818cf8;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              width: 100%;
-            "
-          ></div>
-        </div>
-  
-        <!-- timer -->
-        <div
-          id="timer"
-          style="
-            background-color: black;
-            width: 100px;
-            height: 50px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            border: 4px solid white;
-          "
-        >
-          10
-        </div>
-        <!-- enemy health -->
-        <div
-          style="
-            position: relative;
-            width: 100%;
-            border-top: 4px solid white;
-            border-bottom: 4px solid white;
-            border-right: 4px solid white;
-          "
-        >
-          <div style="background-color: red; height: 30px"></div>
-          <div
-            id="enemyHealth"
-            style="
-              position: absolute;
-              background: #818cf8;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-            "
-          ></div>
-        </div>
-        <div></div>
-      </div>
-      <div
-        id="displayText"
-        style="
-          position: absolute;
-          color: white;
-          align-items: center;
-          justify-content: center;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          display: none;
-        "
-      >
-        Tie
-      </div>
-      <canvas></canvas>
-    </div>
-    <button id="leftArrow" style="
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 60px 30px 0;
-    border-color: transparent gray transparent transparent;
-    position: absolute;
-    background: transparent;
-    top: 85%;
-    left: 5%;
-    "></button>
-    <button id="rightArrow" style="
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 0 30px 60px;
-    border-color: transparent transparent transparent gray; 
-    position: absolute;
-    background: transparent;
-    top: 85%;
-    left: 15%;
-    "></button>
-    <button id="upArrow" style="width: 0; 
-    height: 0; 
-    border-style: solid; 
-    border-width: 0 30px 60px 30px;
-    border-color: transparent transparent gray transparent;
-    position: absolute;
-    background: transparent;
-    top: 80%; 
-    left: 10%;
-    "></button>
-    <button id="leftArrowii" style="
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 60px 30px 0;
-    border-color: transparent gray transparent transparent;
-    position: absolute;
-    background: transparent;
-    top: 85%;
-    left: 55%;
-    "></button>
-    <button id="rightArrowii" style="
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 0 30px 60px;
-    border-color: transparent transparent transparent gray; 
-    position: absolute;
-    background: transparent;
-    top: 85%;
-    left: 65%;
-    "></button>
-    <button id="upArrowii" style="width: 0; 
-    height: 0; 
-    border-style: solid; 
-    border-width: 0 30px 60px 30px;
-    border-color: transparent transparent gray transparent;
-    position: absolute;
-    background: transparent;
-    top: 80%; 
-    left: 60%;
-    "></button>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="js/utils.js"></script>
-    <script src="js/classes.js"></script>
-    <script src="script.js"></script>
+    <h1 style="position: absolute; top: 5%; left: 50%; transform: translate(-50%,-50%);"><a href="snake.html" style="color: black;" target="_blank">Swag Snake</a></h1>
+    <p style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%);">A version of snake with many cool features such as 60 fps gameplay, rainbow snake and touch controls.</p>
+    <br/>
+    <h1 style="position: absolute; top: 15%; left: 50%; transform: translate(-50%,-50%);"><a href="pong.html" style="color: black;" target="_blank">Pong with AI</a></h1>
+    <p style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%);">A version of pong with AI for the second player.</p>
+    <br/>
+    <h1 style="position: absolute; top: 25%; left: 50%; transform: translate(-50%,-50%);"><a href="breakout.html" style="color: black;" target="_blank">Swag Breakout</a></h1>
+    <p style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);"> A swag version of breakout with 60 fps gameplay and other features.</p>
   </body>
+</html>
