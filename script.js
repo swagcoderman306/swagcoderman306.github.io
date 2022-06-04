@@ -207,10 +207,10 @@ function animate() {
 
   // Enemy movement
   if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
-    enemy.velocity.x = -7
+    enemy.velocity.x = -10
     enemy.switchSprite('run')
   } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
-    enemy.velocity.x = 7
+    enemy.velocity.x = 10
     enemy.switchSprite('run')
   } else {
     enemy.switchSprite('idle')
