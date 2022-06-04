@@ -232,6 +232,7 @@ function animate() {
     player.isAttacking &&
     player.framesCurrent === 4
   ) {
+    enemy.damage = 30
     enemy.takeHit()
     player.isAttacking = false
 
