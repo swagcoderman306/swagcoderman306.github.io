@@ -70,7 +70,7 @@ class Sprite {
         framesMax,
         offset
       })
-  
+      this.damage = 20
       this.velocity = velocity
       this.width = 50
       this.height = 150
@@ -131,7 +131,7 @@ class Sprite {
     }
   
     takeHit() {
-      this.health -= 20
+      this.health -= this.damage 
   
       if (this.health <= 0) {
         this.switchSprite('death')
